@@ -41,7 +41,7 @@ public class Enlace {
     public Connection obtenerConexion(){
         return conn;
     }
-    
+    // es el nombre que debe 
     public void insertarCiudad(Ciudad ciudad) {  
   
         try{  
@@ -68,6 +68,8 @@ public class Enlace {
             
             ResultSet rs = statement.executeQuery(data);
             while(rs.next()){
+                // se usa el get string para llamar el valor en el nombr en la 
+                // base de datos 
                 Ciudad miCiudad = new Ciudad(rs.getString("nombre"),
                 rs.getInt("poblacion"));
                 lista.add(miCiudad);
